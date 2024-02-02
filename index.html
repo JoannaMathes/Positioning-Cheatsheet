@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Styles/reset.css" rel="stylesheet" />
+    <link href="./Styles/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Positioning Cheatsheet</h1>
+    </header>
+    <section>
+        <h2>Position Properties & How To Use Them</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position Property</th>
+                    <th>Syntax</th>
+                    <th>Example</th>
+                    <th>Explanation & Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="static">
+                    <td>Static</td>
+                    <td class="code-snippet">position: static;</td>
+                    <td class="example"><img src="./Images/Static.png" alt="picture showing static positioning"><br><p class="code-snippet">position: static; <br>top: 15px;</p></td>
+                    <td>This is the default property for html/css elements so you will notice no change when you hover. This property keeps the targeted element in the flow of the document and it behaves in a normal way. </td>
+                </tr>
+                <tr class="absolute">
+                    <td>Absolute</td>
+                    <td class="code-snippet">position: absolute;</td>
+                    <td class="example"><img src="./Images/absolute.png" alt="picture showing absolute positioning"><br><p class="code-snippet">position: absolute;<br>top: 15px;</p></td>
+                    <td>This property positions the targeted element in reference to the parent element. An offset property will be offsetting the element from the parent element. This property also removes the element from the flow of the document, meaning no place is saved for it once offset. It can be positioned overlapping, above, or underneath other elements.</td>
+                </tr>
+                <tr class="relative">
+                    <td>Relative</td>
+                    <td class="code-snippet">position: relative;</td>
+                    <td class="example"><img src="./Images/relative.png" alt="picture showing relative positioning"><br><p class="code-snippet">position: relative; <br>top: 15px;</p></td>
+                    <td>This property positions the targeted element relative to its original place. Offset properties are positioning it relative to its default location and stays in the noraml flow of the document. Meaning if it is moved from its original place the space it occupied will remain and will not be taken by other elements.</td>
+                </tr>
+                <tr class="fixed">
+                    <td>Fixed</td>
+                    <td class="code-snippet">position: fixed;</td>
+                    <td class="example"><img src="./Images/fixed.png" alt="picture showing fixed positioning"><br><p class="code-snippet">position: static; <br>top: 15px;</p></td>
+                    <td>This property removes the targeted element from the flow of the document meaning no space is saved for it. The element is positioned in reference to the 'containing block' meaning the screen. Meaning that when you scroll it stays at the same place on the screen. This can be helpful for elements from want to stay visible throughout a document such as a navigation bar, breadcrumb map, or list of chapters/sections.</td>
+                </tr>
+                <tr class="sticky">
+                    <td>Sticky</td>
+                    <td class="code-snippet">position sticky;</td>
+                    <td class="example"><img src="./Images/sticky.png" alt="picture showing sticky positioning"><br><p class="code-snippet">position: static; <br>top: 15px;</p></td>
+                    <td>This property positions the target element in reference to its closest block level ancestor and is offset from this ancestor. The element stays in the normal flow of the document, meaning its deafult place is saved. But it scrolls to remain in the same position on the screen. This has many of the capabilities of the fixed position. It depends on whether you want it positioned in reference to ancestor or in reference to the body</td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="offset-overview">
+            <h3>Offset Properties</h3>
+            <div>
+                <h4 class="code-snippet">top: 0px;</h4>
+                <p>The <span class="code-snippet">top</span> offset moves an element down. Because it is offsetting it from the top. Setting it to zero will cause the element to hug the top since the specified offset distance is zero.</p>
+            </div>
+            <div>
+                <h4 class="code-snippet">bottom: 0px;</h4>
+                <p>The <span class="code-snippet">bottom</span> offset moves an element up. Because it is offsetting it from the bottom. The greater the number the higher it will position it. Setting it to zero will cause the element to hug the bottom since the specified distance is zero.</p>
+            </div>
+            <div>
+                <h4 class="code-snippet">left: 15px;</h4>
+                <p>The <span class="code-snippet">left</span> offset moves an element towards the right. Because it is offsetting it from the left. The greater the number the further right it pushes. Setting it to zero will cause the element to hug the left since the specified distance is zero.</p>
+            </div>
+            <div>
+                <h4 class="code-snippet">right: 0px;</h4>
+                <p>The <span class="code-snippet">right</span> offset moves an element towards the left. Because it is offsetting it from the right. The greater the number the further left it pushes. Setting it to zero will cause the element to hug the right because the specified distance is zero.</p>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <p>Made by Joanna Mathes</p>
+    </footer>
+</body>
+</html>
